@@ -3,7 +3,7 @@ library(ggplot2)
 library(forecast)
 
 #loading the dataset
-data <- read.csv("D://NSBM//3rd year 2nd semester//Big Data Analysis//Lab//Lab//Week-01//Airplanes_Dataset.csv")
+data <- read.csv("Airplanes_Dataset.csv")
 
 str(data)
 
