@@ -22,4 +22,7 @@ fviz_eig(pca_model, addlabels = TRUE, ylim = c(0,100))
 pca_transformed_data <- as.data.frame(pca_model$x)
 head(pca_transformed_data)
 
-
+ggplot(pca_transformed_data, aes(x=PC1, y=PC2)) +
+  geom_point(color="blue", alpha=0.6) +
+  ggtitle("Customer segmentation based on PC1 and PC2") +
+  theme_minimal()
