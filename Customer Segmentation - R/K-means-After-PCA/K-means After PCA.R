@@ -39,5 +39,11 @@ compute_hull <- function(df) df[chull(df$PC1, df$PC2),]
 #install.packages("cluster")
 library(cluster)
 
+hull_data <- pca_transformed_data %>%
+group_by(cluster)%>%
+group_split()%>%
+lapply(compute_hull)%>%
+bind_rows()
+
 
 
