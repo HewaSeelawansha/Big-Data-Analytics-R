@@ -19,5 +19,6 @@ pca_transformed_data <- as.data.frame(pca_model$x)
 set.seed(150)
 cluster_results <- kmeans(pca_transformed_data[,1:2], centers = 4)
 
-
+#adding labels to clusters
+pca_transformed_data$cluster <- as.factor(cluster_results$cluster)
 
