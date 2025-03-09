@@ -36,4 +36,8 @@ ggplot(pca_transformed_data, aes(x= PC1, y= PC2, color=cluster))+
 #creating corvex hull for each cluster
 compute_hull <- function(df) df[chull(df$PC1, df$PC2),]
 
+#install.packages("cluster")
+library(cluster)
+
+
 
