@@ -45,5 +45,8 @@ group_split()%>%
 lapply(compute_hull)%>%
 bind_rows()
 
-
-
+ggplot(pca_transformed_data, aes(x = PC1, y = PC2, color = cluster)) +
+  geom_point(size = 3, alpha = 0.8) +
+  geom_polygon(data = hull_data, aes(x = PC1, y = PC2, fill = cluster), alpha = 0.4) +
+  labs(title = "PC1 vs PC2 Cluster Distribution", x = "PC1", y = "PC2") +
+  theme_minimal()
