@@ -24,7 +24,7 @@ pca_transformed_data$cluster <- as.factor(cluster_results$cluster)
 
 #drawing cluster results
 #PC1 against PC2
-ggplot(pca_transformed_data, aes(x= PC1, y= PC2, color=Cluster))+
+ggplot(pca_transformed_data, aes(x= PC1, y= PC2, color=cluster))+
   stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
   geom_point(size=3, alpha=0.8)+
   labs(title= "PC1 against PC2 distribution of clusters",
