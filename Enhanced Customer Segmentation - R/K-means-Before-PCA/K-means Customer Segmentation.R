@@ -44,4 +44,12 @@ ggplot(data, aes(x= Annual_Income, y= Spending_Score, color=cluster))+
        y="Spending_Score")+
   theme_minimal()
 
+#Annual_Income against Total_Purchases
+ggplot(data, aes(x= Annual_Income, y= Total_Purchases, color=cluster))+
+  stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
+  geom_point(size=3, alpha=0.8)+
+  labs(title= "Annual_Income against Total_Purchases distribution of clusters",
+       x="Annual_Income",
+       y="Total_Purchases")+
+  theme_minimal()
 
