@@ -53,3 +53,12 @@ ggplot(data, aes(x= Annual_Income, y= Total_Purchases, color=cluster))+
        y="Total_Purchases")+
   theme_minimal()
 
+#Age against Online_Shopping_Frequency
+ggplot(data, aes(x= Age, y= Online_Shopping_Frequency, color=cluster))+
+  stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
+  geom_point(size=3, alpha=0.8)+
+  labs(title= "Age against Online_Shopping_Frequency distribution of clusters",
+       x="Age",
+       y="Online_Shopping_Frequency")+
+  theme_minimal()
+
