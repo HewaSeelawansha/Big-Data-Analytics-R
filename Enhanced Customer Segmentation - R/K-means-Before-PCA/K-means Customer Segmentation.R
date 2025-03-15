@@ -26,5 +26,12 @@ ggplot(data, aes(x= Age, y= Annual_Income, color=cluster))+
        y="Annual_Income")+
   theme_minimal()
 
-
+#Age against Spending_Score
+ggplot(data, aes(x= Age, y= Spending_Score, color=cluster))+
+  stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
+  geom_point(size=3, alpha=0.8)+
+  labs(title= "Age against Spending_Score distribution of clusters",
+       x="Age",
+       y="Spending_Score")+
+  theme_minimal()
 
