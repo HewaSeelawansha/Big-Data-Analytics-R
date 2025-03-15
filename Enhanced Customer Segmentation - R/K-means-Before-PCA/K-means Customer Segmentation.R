@@ -44,7 +44,7 @@ ggplot(data, aes(x= Annual_Income, y= Spending_Score, color=cluster))+
        y="Spending_Score")+
   theme_minimal()
 
-#Annual_Income against Total_Purchases
+  #Annual_Income against Total_Purchases
 ggplot(data, aes(x= Annual_Income, y= Total_Purchases, color=cluster))+
   stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
   geom_point(size=3, alpha=0.8)+
@@ -62,3 +62,20 @@ ggplot(data, aes(x= Age, y= Online_Shopping_Frequency, color=cluster))+
        y="Online_Shopping_Frequency")+
   theme_minimal()
 
+#Age against Offline_Shopping_Frequency
+ggplot(data, aes(x= Age, y= Offline_Shopping_Frequency, color=cluster))+
+  stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
+  geom_point(size=3, alpha=0.8)+
+  labs(title= "Age against Offline_Shopping_Frequency distribution of clusters",
+       x="Age",
+       y="Offline_Shopping_Frequency")+
+  theme_minimal()
+
+#Age against Customer_Loyalty_Score
+ggplot(data, aes(x= Age, y= Customer_Loyalty_Score, color=cluster))+
+  stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
+  geom_point(size=3, alpha=0.8)+
+  labs(title= "Age against Customer_Loyalty_Score distribution of clusters",
+       x="Age",
+       y="Customer_Loyalty_Score")+
+  theme_minimal()
