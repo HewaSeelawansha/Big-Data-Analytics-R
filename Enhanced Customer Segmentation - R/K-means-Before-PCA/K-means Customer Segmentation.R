@@ -89,3 +89,12 @@ ggplot(data, aes(x= Discount_Usage, y= Annual_Income, color=cluster))+
        y="Annual_Income")+
   theme_minimal()
 
+#Discount_Usage against Customer_Loyalty_Score
+ggplot(data, aes(x= Discount_Usage, y= Customer_Loyalty_Score, color=cluster))+
+  stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
+  geom_point(size=3, alpha=0.8)+
+  labs(title= "Discount_Usage against Customer_Loyalty_Score distribution of clusters",
+       x="Discount_Usage",
+       y="Customer_Loyalty_Score")+
+  theme_minimal()
+
