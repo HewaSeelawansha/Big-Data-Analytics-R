@@ -116,3 +116,12 @@ ggplot(data, aes(x= Discount_Usage, y= Customer_Satisfaction, color=cluster))+
        y="Customer_Satisfaction")+
   theme_minimal()
 
+#Avg_Purchase_Value against Annual_Income
+ggplot(data, aes(x= Avg_Purchase_Value, y= Annual_Income, color=cluster))+
+  stat_ellipse(aes(fill=cluster), geom = "polygon", alpha=0.4) + 
+  geom_point(size=3, alpha=0.8)+
+  labs(title= "Avg_Purchase_Value against Annual_Income distribution of clusters",
+       x="Avg_Purchase_Value",
+       y="Annual_Income")+
+  theme_minimal()
+
