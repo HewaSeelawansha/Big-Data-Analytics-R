@@ -22,3 +22,5 @@ cluster_results <- kmeans(pca_transformed_data[,1:2], centers = 3)
 #adding labels to clusters
 pca_transformed_data$cluster <- as.factor(cluster_results$cluster)
 
+library(GGally)
+
