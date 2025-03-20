@@ -12,3 +12,6 @@ head(scaled_data)
 pca_model <- prcomp(scaled_data, center=TRUE, scale=TRUE)
 pca_model
 
+#transforming data set into principal components
+pca_transformed_data <- as.data.frame(pca_model$x)
+
