@@ -73,4 +73,19 @@ plot <- ggpairs(
   theme_minimal() +
   ggtitle("Pairwise Plot of the First 4 Principal Components with Clusters")
 
+# Adding Convex Hulls to Lower Panels
+for (panel in plot$plots) {
+  if (!is.null(panel)) {
+    panel$layers <- c(
+      panel$layers,
+      geom_polygon(
+        data = hull_data,
+        aes_string(x = "PC1", y = "PC2", fill = "cluster"),
+        alpha = 0.2,
+        inherit.aes = FALSE
+      )
+    )
+  }
+}
+
 
