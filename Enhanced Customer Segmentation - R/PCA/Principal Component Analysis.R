@@ -22,4 +22,7 @@ fviz_eig(pca_model, addlabels = TRUE, ylim = c(0,100))
 pca_transformed_data <- as.data.frame(pca_model$x)
 head(pca_transformed_data)
 
-
+ggpairs(pca_transformed_data[, c("PC1", "PC2", "PC3", "PC4")],
+        aes(color = I("blue"), alpha = 0.6)) +
+  theme_minimal() +
+  ggtitle("Pairwise Plot of the First 4 Principal Components")
