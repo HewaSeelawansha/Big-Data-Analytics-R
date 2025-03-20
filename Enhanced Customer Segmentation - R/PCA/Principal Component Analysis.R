@@ -18,3 +18,8 @@ summary(pca_model)
 #screen Plot
 fviz_eig(pca_model, addlabels = TRUE, ylim = c(0,100))
 
+#transforming data set into principal components
+pca_transformed_data <- as.data.frame(pca_model$x)
+head(pca_transformed_data)
+
+
