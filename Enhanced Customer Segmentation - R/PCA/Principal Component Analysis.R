@@ -15,3 +15,6 @@ pca_model <- prcomp(scaled_data, center=TRUE, scale=TRUE)
 pca_model
 summary(pca_model)
 
+#screen Plot
+fviz_eig(pca_model, addlabels = TRUE, ylim = c(0,100))
+
