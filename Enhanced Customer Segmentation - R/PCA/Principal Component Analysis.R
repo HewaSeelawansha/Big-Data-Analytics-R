@@ -6,3 +6,7 @@ library(GGally)
 library(dplyr)
 library(factoextra)
 
+#Standardization
+scaled_data <- scale(data)
+head(scaled_data)
+
