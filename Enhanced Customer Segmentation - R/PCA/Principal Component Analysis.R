@@ -10,3 +10,8 @@ library(factoextra)
 scaled_data <- scale(data)
 head(scaled_data)
 
+#calculating PCA with Eigenvalues and Eigenvectors
+pca_model <- prcomp(scaled_data, center=TRUE, scale=TRUE)
+pca_model
+summary(pca_model)
+
