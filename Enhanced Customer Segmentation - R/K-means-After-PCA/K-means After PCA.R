@@ -4,3 +4,7 @@ library(factoextra)
 
 data <- read.csv("large_pca_data.csv")
 
+#standardization
+scaled_data <- scale(data)
+head(scaled_data)
+
