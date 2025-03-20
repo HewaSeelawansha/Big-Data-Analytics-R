@@ -8,3 +8,7 @@ data <- read.csv("large_pca_data.csv")
 scaled_data <- scale(data)
 head(scaled_data)
 
+#calculating PCA with eigenvalues and eigenvectors
+pca_model <- prcomp(scaled_data, center=TRUE, scale=TRUE)
+pca_model
+
