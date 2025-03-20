@@ -63,3 +63,14 @@ hull_data <- bind_rows(
   ) %>% unlist(recursive = FALSE)
 )
 
+# Pairwise Plot with Clusters and Convex Hulls
+plot <- ggpairs(
+  pca_transformed_data[, c("PC1", "PC2", "PC3", "PC4", "cluster")],
+  aes(color = cluster, alpha = 0.6),
+  upper = list(continuous = wrap("cor", size = 3)),
+  lower = list(continuous = wrap("points", alpha = 0.8, size = 2))
+) +
+  theme_minimal() +
+  ggtitle("Pairwise Plot of the First 4 Principal Components with Clusters")
+
+
