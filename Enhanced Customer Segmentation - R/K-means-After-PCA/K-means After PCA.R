@@ -24,3 +24,12 @@ pca_transformed_data$cluster <- as.factor(cluster_results$cluster)
 
 library(GGally)
 
+#PC1 to PC4
+ggpairs(
+  pca_transformed_data[, c("PC1", "PC2", "PC3", "PC4", "cluster")],
+  aes(color = cluster, alpha = 0.6),
+  upper = list(continuous = wrap("cor", size = 3))
+) +
+  theme_minimal() +
+  ggtitle("Pairwise Plot of the First 4 Principal Components with Clusters")
+
